@@ -1,1 +1,0 @@
-GitHub repo that contains some metrics implementation in java : https://github.com/rodhilton/jasome/tree/master
