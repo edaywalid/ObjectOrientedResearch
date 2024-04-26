@@ -22,14 +22,21 @@
 
 5. **Nombre d'Enfants d'une Classe (NOC)**
 
-- **Définition** : Le nombre d'enfants d'une classe (NOC) est une mesure qui indique le nombre de sous-classes directes héritant d'une classe parente dans une hiérarchie d'héritage.
+   - **Définition** : Le nombre d'enfants d'une classe (NOC) est une mesure qui indique le nombre de sous-classes directes héritant d'une classe parente dans une hiérarchie d'héritage.
 
-- **Formule** : Le NOC d'une classe est simplement le nombre de ses sous-classes directes.
+   - **Formule** : Le NOC d'une classe est simplement le nombre de ses sous-classes directes.
 
+<<<<<<< HEAD
 - **Impact** : 
     - Un NOC élevé peut indiquer une classe centrale dans la hiérarchie d'héritage, ayant une influence significative sur la conception globale du système.
     - Il peut nécessiter des tests supplémentaires pour valider les méthodes héritées dans chaque sous-classe.
     - Un NOC élevé peut également indiquer une mauvaise abstraction de la classe parente, nécessitant une révision de la conception pour une meilleure distribution des responsabilités.
+=======
+   - **Impact** : 
+  - Un NOC élevé peut indiquer une classe centrale dans la hiérarchie d'héritage, ayant une influence significative sur la conception globale du système.
+  - Il peut nécessiter des tests supplémentaires pour valider les méthodes héritées dans chaque sous-classe.
+  - Un NOC élevé peut également indiquer une mauvaise abstraction de la classe parente, nécessitant une révision de la conception pour une meilleure distribution des responsabilités.
+>>>>>>> refs/remotes/origin/main
 
 6. **Nombre de Parents (NOPa)** :
    - **Définition** : Le nombre de parents d'une classe (NOPa) est le nombre de classes dont elle hérite directement.
