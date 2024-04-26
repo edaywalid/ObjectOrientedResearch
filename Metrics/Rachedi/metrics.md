@@ -26,17 +26,10 @@
 
    - **Formule** : Le NOC d'une classe est simplement le nombre de ses sous-classes directes.
 
-<<<<<<< HEAD
-- **Impact** : 
-    - Un NOC élevé peut indiquer une classe centrale dans la hiérarchie d'héritage, ayant une influence significative sur la conception globale du système.
-    - Il peut nécessiter des tests supplémentaires pour valider les méthodes héritées dans chaque sous-classe.
-    - Un NOC élevé peut également indiquer une mauvaise abstraction de la classe parente, nécessitant une révision de la conception pour une meilleure distribution des responsabilités.
-=======
    - **Impact** : 
-  - Un NOC élevé peut indiquer une classe centrale dans la hiérarchie d'héritage, ayant une influence significative sur la conception globale du système.
-  - Il peut nécessiter des tests supplémentaires pour valider les méthodes héritées dans chaque sous-classe.
-  - Un NOC élevé peut également indiquer une mauvaise abstraction de la classe parente, nécessitant une révision de la conception pour une meilleure distribution des responsabilités.
->>>>>>> refs/remotes/origin/main
+       - Un NOC élevé peut indiquer une classe centrale dans la hiérarchie d'héritage, ayant une influence significative sur la conception globale du système.
+       - Il peut nécessiter des tests supplémentaires pour valider les méthodes héritées dans chaque sous-classe.
+       - Un NOC élevé peut également indiquer une mauvaise abstraction de la classe parente, nécessitant une révision de la conception pour une meilleure distribution des responsabilités.
 
 6. **Nombre de Parents (NOPa)** :
    - **Définition** : Le nombre de parents d'une classe (NOPa) est le nombre de classes dont elle hérite directement.
@@ -73,7 +66,7 @@
     - **Formule** : La NBD est déterminée en comptant le nombre maximal de blocs de code qui sont imbriqués les uns à l'intérieur des autres à l'intérieur d'une fonction ou d'une méthode.
 
     - **Impact** :
-    - Une NBD élevée peut rendre le code source difficile à lire, à comprendre et à maintenir.
-    - Une profondeur excessive des blocs imbriqués peut indiquer une complexité excessive du code, ce qui peut augmenter le risque d'erreurs et de bogues.
-    - Une NBD élevée peut également rendre le code plus difficile à tester, car il peut y avoir plusieurs chemins d'exécution à travers les blocs imbriqués, augmentant ainsi la complexité des tests unitaires.
+       - Une NBD élevée peut rendre le code source difficile à lire, à comprendre et à maintenir.
+       - Une profondeur excessive des blocs imbriqués peut indiquer une complexité excessive du code, ce qui peut augmenter le risque d'erreurs et de bogues.
+       - Une NBD élevée peut également rendre le code plus difficile à tester, car il peut y avoir plusieurs chemins d'exécution à travers les blocs imbriqués, augmentant ainsi la complexité des tests unitaires.
 
