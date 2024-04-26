@@ -1,12 +1,12 @@
 Bechar :
 Number of attributes
 Number of static attributes
-Number of public attributes
+Number of attributes
 Number of methods 
 Number of static methods 
 Number of classes 
 
-Benalia:(manssam7akch nabil)
+Benalia:(manssam7akch nabil):
 Number of overriden methods (NORM)
 Number of inherited methods (NMI)
 Number of Methods Added to Inheritance (NMA)
@@ -14,7 +14,7 @@ Specialization Index (SIX)
 Number of Methods Inherited Total (Mit)
 Number of Methods Inherited (Mi)
 
-Hadj Arab 
+Hadj Arab :
  Method Inheritance Factor (MIF)
 Number of Public Methods Defined (PMd) 
 Number of Public Methods Inherited (PMi)
@@ -33,7 +33,7 @@ Number of Attributes Overidden (Ao)
  Attribute Inheritance Factor (AIF)
 Method Hiding Factor (AHF)
 
-Kecira
+Kecira:
 McCabe Cyclomatic Complexity (VG)
 Weighed Methods per Class (WMC)
  Lack of Cohesion Methods (LCOM)
