@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class Main {
@@ -11,18 +9,13 @@ public class Main {
   public static void main(String[] args) {
     String filePath = args[0] + ".java";
     Set<String> importedPackages = getImportedPackages(filePath);
-    System.out.println("\t------------- Imported Packages -------------");
-    for (String p : importedPackages) {
-      System.out.println("[" + p + "]");
-    }
-    System.out.println("number of imported packages: " + importedPackages.size());
 
-    System.out.println("\n\n\t------------- Classes in java.io package -------------");
-    String[] classNames = listClassesInPackage("java.io");
-    for (String className : classNames) {
-      System.out.println(className);
-    }
-    System.out.println("Total classes: " + classNames.length);
+    // Uncomment the following loop to print the imported packages
+    // System.out.println("\t------------- Imported Packages -------------");
+    // for (String p : importedPackages) {
+    //   System.out.println("[" + p + "]");
+    // }
+    System.out.println("number of imported packages: " + importedPackages.size());
   }
 
   public static Set<String> getImportedPackages(String filePath) {
@@ -37,7 +30,9 @@ public class Main {
           if (packageName.endsWith(".*")) {
             String rootPackage = packageName.substring(0, packageName.length() - 2);
             addSubPackages(packages, rootPackage);
-            packages.add(rootPackage);
+            // packages.add(rootPackage);   // Uncomment this line to include the root package in
+            // the imported packages
+            addClassesOfPackage(rootPackage, packages);
           } else {
             packages.add(packageName);
           }
@@ -55,14 +50,15 @@ public class Main {
     Package[] packages = Package.getPackages();
     for (Package p : packages) {
       if (p.getName().startsWith(packageName + ".")) {
-        subPackages.add(p.getName());
+        // subPackages.add(p.getName());    // Uncomment this line to include the subpackage in the
+        // imported packages
+        addClassesOfPackage(p.getName(), subPackages);
         addSubPackages(subPackages, p.getName());
       }
     }
   }
 
-  public static String[] listClassesInPackage(String packageName) {
-    List<String> classNames = new ArrayList<>();
+  public static void addClassesOfPackage(String packageName, Set<String> importedPackages) {
     String packagePath = packageName.replace('.', '/');
     String javaHome = System.getProperty("java.home");
 
@@ -71,14 +67,12 @@ public class Main {
       while ((line = reader.readLine()) != null) {
         line = line.trim();
         if (line.startsWith(packagePath) && !line.contains("$")) {
-          classNames.add(line);
+          importedPackages.add(line);
         }
       }
 
     } catch (IOException e) {
       e.printStackTrace();
     }
-
-    return classNames.toArray(new String[0]);
   }
 }
