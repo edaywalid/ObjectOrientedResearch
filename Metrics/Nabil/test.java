@@ -1,7 +1,7 @@
 import java.awt.event.*;
 import java.lang.annotation.Annotation;
 
-public class test  implements Runnable
+public class test  implements Runnable, FocusListener
         , ActionListener, WindowListener, KeyListener, MouseListener, MouseMotionListener, MouseWheelListener {
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -99,6 +99,16 @@ public class test  implements Runnable
 
     @Override
     public void windowDeactivated(WindowEvent e) {
+
+    }
+
+    @Override
+    public void focusGained(FocusEvent e) {
+
+    }
+
+    @Override
+    public void focusLost(FocusEvent e) {
 
     }
 }
