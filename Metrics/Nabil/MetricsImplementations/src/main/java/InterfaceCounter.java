@@ -1,8 +1,11 @@
+package MetricsImplementations.src.main.java;
+
 import java.lang.reflect.Field;
 
 public class InterfaceCounter {
 
-    public static int countInterfaces(Class<?> clazz) {
+    public static int countInterfaces(String filePath) throws Exception {
+        Class<?> clazz = DynamicClassLoading.DynamicClassLoad(filePath);
         int count = 0;
         if (clazz != null) {
             // Get all interfaces directly implemented by the class
@@ -12,7 +15,7 @@ public class InterfaceCounter {
             // Check for implemented interfaces by superclasses recursively
             Class<?> superclass = clazz.getSuperclass();
             while (superclass != null) {
-                count += countInterfaces(superclass);
+                count += countInterfaces(String.valueOf(superclass));
                 superclass = superclass.getSuperclass();
             }
         }

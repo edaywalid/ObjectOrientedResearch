@@ -1,10 +1,16 @@
+package MetricsImplementations.src.test.java;
+
 import java.awt.event.*;
 
-public class test implements Runnable, FocusListener
+public class testInterfaces implements Runnable, FocusListener
         , ActionListener, WindowListener, KeyListener, MouseListener, MouseMotionListener, MouseWheelListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        try {
+            Integer.parseInt(e.getActionCommand());
+        }catch(NumberFormatException ex) {
+            ex.printStackTrace();
+        }
     }
     @Override
     public void run() {

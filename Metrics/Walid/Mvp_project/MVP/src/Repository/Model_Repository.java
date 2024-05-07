@@ -20,7 +20,9 @@ public class Model_Repository{
                 new ClassLevelMetric("NOM", "src/Model/MetricDefinition.java"),
                 new ClassLevelMetric("NOF", "src/Model/MetricDefinition.java"),
                 new ClassLevelMetric("NOPF", "src/Model/MetricDefinition.java"),
-                new ClassLevelMetric("NOS", "src/Model/MetricDefinition.java")
+                new ClassLevelMetric("NOS", "src/Model/MetricDefinition.java"),
+                new ClassLevelMetric("NII", "/home/nabilkara/metricImpl/ObjectOrientedResearch/Metrics/Nabil/MetricsImplementations/src/main/java/InterfaceCounter.java"),
+                new ClassLevelMetric("NHE", "/home/nabilkara/metricImpl/ObjectOrientedResearch/Metrics/Nabil/MetricsImplementations/src/main/java/handledExceptions.java")
         ));
 
         packageLevelMetrics = new ArrayList<>(List.of(
