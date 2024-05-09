@@ -1,7 +1,4 @@
 package MetricsImplementations.src.main.java;
-
-import java.lang.reflect.Field;
-
 public class InterfaceCounter {
 
     public static int countInterfaces(String filePath) throws Exception {
