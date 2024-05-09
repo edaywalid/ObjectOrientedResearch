@@ -1,10 +1,12 @@
+package MetricsImplementations.src.main.java;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class InterfaceCountInJavaClass {
+public class NumberOfInterfacesImplemented {
     public static void main(String[] args) {
 
         String fileName = "file.java";
