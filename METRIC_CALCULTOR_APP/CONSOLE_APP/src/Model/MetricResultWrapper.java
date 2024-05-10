@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MetricResultWrapper {
-    private Map<String , ArrayList<Result>> metricResults = new HashMap<>();
+    private final Map<String , ArrayList<Result>> metricResults = new HashMap<>();
 
     public MetricResultWrapper(){
     }
