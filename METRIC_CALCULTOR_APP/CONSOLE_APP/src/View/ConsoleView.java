@@ -11,10 +11,10 @@ public class ConsoleView {
     }
 
     public void printMetricClass(String metricType) {
-        System.out.println("Result For : " + metricType);
+        System.out.println("\n========== " + metricType + " ==========");
     }
 
     public void printMetricResult(String metricName, String result) {
-        System.out.println(metricName + " : " + result);
+        System.out.println(metricName + " ---> " + result);
     }
 }

@@ -8,6 +8,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.ArrayList;
+import java.math.MathContext;
 
 public class NumberOfImportedClasses extends ClassLevelMetric {
   // Default constructor :
@@ -17,6 +19,15 @@ public class NumberOfImportedClasses extends ClassLevelMetric {
 
   // Method to get the Array of imported packages :
   public Set<String> getImportedPackages(String filePath) {
+    // ArrayList
+    // MathContext
+
+    /*
+    ArrayList<String> packages = new ArrayList<>();
+    MathContext mc = new MathContext(0);
+    */
+
+
     Set<String> packages = new HashSet<>();
     try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
       String line;
@@ -68,7 +79,12 @@ public class NumberOfImportedClasses extends ClassLevelMetric {
   // Methods to override: calculate and execute
   @Override
   public float calculate(String file_path) {
-    return this.getImportedPackages(file_path).size();
+    try {
+      return this.getImportedPackages(file_path).size();
+    } catch (Exception e) {
+      e.printStackTrace();
+      return -1;
+    }
   }
 
   @Override

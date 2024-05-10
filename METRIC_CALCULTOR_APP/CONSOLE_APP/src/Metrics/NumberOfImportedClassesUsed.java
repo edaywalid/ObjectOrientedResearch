@@ -65,7 +65,12 @@ public class NumberOfImportedClassesUsed extends ClassLevelMetric {
 
   @Override
   public float calculate(String file_path) {
-    return this.getNumberOfUsedClasses(file_path).size();
+    try {
+      return this.getNumberOfUsedClasses(file_path).size();
+    } catch (Exception e) {
+      e.printStackTrace();
+      return -1;
+    }
   }
 
   @Override
