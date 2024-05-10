@@ -4,11 +4,11 @@
 3. Add the metric name with the super constructor
 4. implement the `calculate` method
 5. implement the  `execute` method
+6. Add the metric in the `Repository/Model_Repository.java` file as pointed in the 2nd point
+7. Run the app and check the results
+##  HERE IS A PRACTICE EXAMPLE
 
-
-### HERE IS A PRACTICE EXAMPLE
-
-## u can always find this example in the Metrics folder
+### Step 1 -> 5 :
 
     package Metrics;
 
@@ -35,4 +35,20 @@
         public Result execute(String file_path) {
             return new Result(this.metricName, String.valueOf(this.calculate(file_path)));
         }
+    }
+
+### Step 6 :
+
+    public Model_Repository(){
+        
+        classLevelMetrics = new ArrayList<>(List.of(
+           // ... previous metrics
+
+            // Add the metric here
+            new ExampleMetric("Example Metric")
+        ));
+
+        packageLevelMetrics = new ArrayList<>(List.of(
+
+        ));
     }
