@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Metrics/Adel/Adel.iml" filepath="$PROJECT_DIR$/Metrics/Adel/Adel.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Metrics/Metrics.iml" filepath="$PROJECT_DIR$/Metrics/Metrics.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ObjectOrientedResearch.iml" filepath="$PROJECT_DIR$/.idea/ObjectOrientedResearch.iml" />
     </modules>
   </component>
