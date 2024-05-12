@@ -1,8 +1,9 @@
 package Repository;
 
-import Metrics.ExampleMetric;
-import Metrics.NumberOfImportedClasses;
-import Metrics.NumberOfImportedClassesUsed;
+import Metrics.*;
+
+
+
 import Model.Metric;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +16,13 @@ public class Model_Repository {
     classLevelMetrics =
         new ArrayList<>(
             List.of(
-                new ExampleMetric("Example Metric"),
-                new NumberOfImportedClasses("Number of Imported Classes"),
-                    new NumberOfImportedClassesUsed("Number of Imported Classes Used")
+                    new ExampleMetric("Example Metric"),
+                    new NumberOfImportedClasses("Number of Imported Classes"),
+                    new NumberOfImportedClassesUsed("Number of Used Imported Classes"),
+                    new handledExceptions("Number Of Handled Exceptions"),
+                    new InterfaceCounter("Number of Implemented Interfaces"),
+                    new numberOfUsedMethodsFromImports("Number of Used Methods From Imports")
+
                     ));
 
     packageLevelMetrics = new ArrayList<>(List.of());
