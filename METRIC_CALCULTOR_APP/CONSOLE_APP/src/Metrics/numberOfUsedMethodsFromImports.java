@@ -48,6 +48,6 @@ public class numberOfUsedMethodsFromImports extends ClassLevelMetric {
 
     @Override
     public Result execute(String file_path) {
-        return new Result("Used Methods From Imports", String.valueOf(calculate(file_path)));
+        return new Result(this.metricName, String.valueOf(calculate(file_path)));
     }
 }

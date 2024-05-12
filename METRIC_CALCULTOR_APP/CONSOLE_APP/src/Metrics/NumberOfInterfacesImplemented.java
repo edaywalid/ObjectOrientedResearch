@@ -45,6 +45,6 @@ public class NumberOfInterfacesImplemented extends ClassLevelMetric {
 
     @Override
     public Result execute(String file_path) {
-        return new Result("Number Of Interfaces Implemented", String.valueOf(calculate(file_path)));
+        return new Result(this.metricName, String.valueOf(calculate(file_path)));
     }
 }

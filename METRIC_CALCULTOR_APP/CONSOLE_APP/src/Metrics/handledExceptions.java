@@ -71,7 +71,7 @@ public class handledExceptions extends ClassLevelMetric{
 
     @Override
     public Result execute(String file_path) {
-        return new Result("Handled Exceptions Count",String.valueOf(this.calculate(file_path)));
+        return new Result(this.metricName,String.valueOf(this.calculate(file_path)));
     }
 }
 
