@@ -6,33 +6,34 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Scanner;
+public class testUsedMethodsFromImports extends ClassLevelMetric {
 
-public class numberOfUsedMethodsFromImports extends ClassLevelMetric {
-
-    public numberOfUsedMethodsFromImports(String metricName) {
+    public testUsedMethodsFromImports(String metricName) {
         super(metricName);
     }
 
     public float countUsedMethods(String filePath) throws IOException {
         int methodCount = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder codeLine = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
-                methodCount += countMethodCalls(line);
+                codeLine.append(line).append("\n");
             }
+            methodCount += countMethodCalls(codeLine.toString());
         }
         return methodCount;
     }
 
-    private static int countMethodCalls(String line) {
+    private static int countMethodCalls(String code) {
         int count = 0;
 
-        // Improved pattern to capture method calls (including static imports)
-        Pattern pattern = Pattern.compile("\\b([a-zA-Z0-9_.]+)(\\.)([a-zA-Z0-9_]+)\\(.*\\)"); // Captures class, method name, and arguments
+        // Pattern to capture method calls, including those used as parameters
+        Pattern pattern = Pattern.compile("\\b([a-zA-Z0-9_.]+)(?:\\.[a-zA-Z0-9_]+)+\\(.*?\\)");
 
-        Matcher matcher = pattern.matcher(line);
+        Matcher matcher = pattern.matcher(code);
         while (matcher.find()) {
-            System.out.println(matcher.group(1));
             count++;
         }
         return count;
@@ -52,3 +53,4 @@ public class numberOfUsedMethodsFromImports extends ClassLevelMetric {
         return new Result(this.metricName, String.valueOf(calculate(file_path)));
     }
 }
+

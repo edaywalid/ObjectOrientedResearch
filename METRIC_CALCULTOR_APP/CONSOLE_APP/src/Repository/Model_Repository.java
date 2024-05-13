@@ -1,9 +1,6 @@
 package Repository;
 
 import Metrics.*;
-
-
-
 import Model.Metric;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +18,9 @@ public class Model_Repository {
                     new NumberOfImportedClassesUsed("Number of Used Imported Classes"),
                     new handledExceptions("Number Of Handled Exceptions"),
                     new InterfaceCounter("Number of Implemented Interfaces"),
-                    new numberOfUsedMethodsFromImports("Number of Used Methods From Imports")
-
+                    new numberOfUsedMethodsFromImports("Number of Used Methods From Imports"),
+                    new testUsedMethodsFromImports("Test used methods"),
+                    new usedMethodsFromImportsANTLR("ANTLR")
                     ));
 
     packageLevelMetrics = new ArrayList<>(List.of());

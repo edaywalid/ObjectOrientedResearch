@@ -11,7 +11,7 @@ public class testUsedMethodsImports{
         list.add(random.nextInt()+"");
         list.add(random.nextInt()+"");
         list.add(random.nextInt()+"");
-//        list.removeFirst();
+        list.removeFirst();
         String test;
         list.getLast();
 
