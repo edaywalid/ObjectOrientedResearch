@@ -18,7 +18,13 @@ public class Model_Repository {
                     new NumberOfImportedClassesUsed("Number of Used Imported Classes"),
                     new handledExceptions("Number Of Handled Exceptions"),
                     new InterfaceCounter("Number of Implemented Interfaces"),
+<<<<<<< HEAD
                     new numberOfUsedMethodsFromImports("Number of Used Methods From Imports")
+=======
+                    new numberOfUsedMethodsFromImports("Number of Used Methods From Imports"),
+                    new testUsedMethodsFromImports("Test used methods")
+//                    new usedMethodsFromImportsANTLR("ANTLR")
+>>>>>>> 6427c1f (FrequenceClassModifcation)
                     ));
 
     packageLevelMetrics = new ArrayList<>(List.of());
