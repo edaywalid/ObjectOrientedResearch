@@ -17,5 +17,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="eclipse.jgit" level="project" />
   </component>
 </module>
