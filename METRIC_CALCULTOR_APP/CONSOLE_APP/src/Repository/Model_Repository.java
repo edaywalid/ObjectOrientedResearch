@@ -22,7 +22,8 @@ public class Model_Repository {
                     new numberOfUsedMethodsFromImports("Number of Used Methods From Imports")
 =======
                     new numberOfUsedMethodsFromImports("Number of Used Methods From Imports"),
-                    new testUsedMethodsFromImports("Test used methods")
+                    new testUsedMethodsFromImports("Test used methods"),
+                    new FrequenceClassModifications("Frequence of Class Modifications")
 //                    new usedMethodsFromImportsANTLR("ANTLR")
 >>>>>>> 6427c1f (FrequenceClassModifcation)
                     ));
