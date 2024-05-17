@@ -16,7 +16,9 @@ public class DynamicClassLoading{
         return classLoader.loadClass(fileName.split("\\.")[0]);
     }
     public static void compileJavaFile(String filePath) throws Exception {
-        Process compileProcess = Runtime.getRuntime().exec("javac " + filePath);
+//        Process compileProcess = Runtime.getRuntime().exec("javac " + filePath);
+      Process compileProcess =  Runtime.getRuntime().exec("java -classpath " + filePath.replace("\\", "/") + ";");
+
         int exitCode = compileProcess.waitFor();
         if (exitCode != 0) {
             throw new RuntimeException("Compilation failed.");

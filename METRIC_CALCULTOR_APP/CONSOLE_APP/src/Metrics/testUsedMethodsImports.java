@@ -8,7 +8,9 @@ public class testUsedMethodsImports{
     ArrayList<String> list = new ArrayList<>();
     testUsedMethodsImports(){
         Date date = new Date();
-        date.setHours(random.nextInt(10));
+        date.setHours(
+                random.nextInt(10)
+        );
         random.nextBoolean();
         list.add("Nabil");
         list.add("Walid");
