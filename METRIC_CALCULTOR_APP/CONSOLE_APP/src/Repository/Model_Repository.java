@@ -18,7 +18,10 @@ public class Model_Repository {
                     new NumberOfImportedClassesUsed("Number of Used Imported Classes"),
                     new handledExceptions("Number Of Handled Exceptions"),
                     new InterfaceCounter("Number of Implemented Interfaces"),
-                    new numberOfUsedMethodsFromImports("Number of Used Methods From Imports")
+                    new numberOfUsedMethodsFromImports("Number of Used Methods From Imports"),
+                    new WebImportCounter("Web Import Counter"),
+                    new RUEMetric("CPU usage"),
+                    new AUC("Attribute Usage Count")
                     ));
 
     packageLevelMetrics = new ArrayList<>(List.of());

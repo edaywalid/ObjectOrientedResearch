@@ -124,6 +124,6 @@ public class AUC  extends ClassLevelMetric {
 
     @Override
     public Result execute(String file_path) {
-        return new Result(this.metricName, String.valueOf(calculate(file_path)));
+        return new Result(this.metricName, String.valueOf(calculate(file_path)).substring(0,1));
     }
 }
