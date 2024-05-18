@@ -13,15 +13,14 @@ public class Model_Repository {
     classLevelMetrics =
         new ArrayList<>(
             List.of(
-                    new ExampleMetric("Example Metric"),
                     new NumberOfImportedClasses("Number of Imported Classes"),
                     new NumberOfImportedClassesUsed("Number of Used Imported Classes"),
                     new handledExceptions("Number Of Handled Exceptions"),
-                    new InterfaceCounter("Number of Implemented Interfaces"),
+                    new NumberOfInterfacesImplemented("Number of Interfaces Implemented"),
                     new numberOfUsedMethodsFromImports("Number of Used Methods From Imports"),
-                    new WebImportCounter("Web Import Counter"),
-                    new RUEMetric("CPU usage"),
-                    new AUC("Attribute Usage Count")
+                    new WebImportCounter("Web Import Counter")
+//                    new RUEMetric("CPU usage")
+//                    new AUC("Attribute Usage Count") // does not work in windows
                     ));
 
     packageLevelMetrics = new ArrayList<>(List.of());
