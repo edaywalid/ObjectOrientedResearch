@@ -1,3 +1,8 @@
+package Metrics;
+
+import Model.ClassLevelMetric;
+import Model.Result;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,8 +11,25 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class VariableNamingCoherence {
-     static class VariableExtractor {
+public class VariableNamingCoherence extends ClassLevelMetric {
+    public VariableNamingCoherence(String metricName) {
+        super(metricName);
+    }
+
+    @Override
+    public float calculate(String file_path) {
+         Set<String> variableNames = VariableNamingCoherence.VariableExtractor.extractVariables(file_path);
+         List<String> list = new ArrayList<>(variableNames);
+         double similarityScore = VariableNamingCoherence.StringSimilarityScorer.calculateScore(list);
+         return (float) similarityScore;
+    }
+
+    @Override
+    public Result execute(String file_path) {
+        return new Result(this.metricName, String.valueOf(this.calculate(file_path)));
+    }
+
+    static class VariableExtractor {
 
         public static Set<String> extractVariables(String filePath) {
 
@@ -143,16 +165,4 @@ public class VariableNamingCoherence {
         }
     }
 
-    public static void main(String[] args) {
-        String filePath = args[0];
-        Set<String> variableNames = VariableNamingCoherence.VariableExtractor.extractVariables(filePath);
-
-            //convert the set into a list to access indexes
-            List<String> list = new ArrayList<>(variableNames);
-
-
-        System.out.println("Variable names in the file: " + variableNames);
-        double similarityScore = VariableNamingCoherence.StringSimilarityScorer.calculateScore(list);
-        System.out.println("Variable naming coheerence is : " + similarityScore);
-    }
 }
