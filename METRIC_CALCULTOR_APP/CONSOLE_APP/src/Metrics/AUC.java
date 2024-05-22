@@ -1,6 +1,6 @@
 package Metrics;
 
-import Model.ClassLevelMetric;
+import Model.DefaultMetric.ClassLevelMetric;
 import Model.Result;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
@@ -119,12 +119,9 @@ public class AUC  extends ClassLevelMetric {
             countAttributeUsage(file_path);
         } catch (FileNotFoundException e) {
         }
-        System.out.println("number of methods " +this.getNumberOfMethods());
         if(this.getNumberOfMethods() == 0){
             return 0;
         }
-        System.out.println("utilisationAttribute() = " + utilisationAttribute());
-        System.out.println("numberOfMethods = " + this.getNumberOfMethods());
         return this.utilisationAttribute()/this.getNumberOfMethods();
     }
 

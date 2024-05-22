@@ -1,6 +1,6 @@
 package Metrics;
 
-import Model.ClassLevelMetric;
+import Model.DefaultMetric.ClassLevelMetric;
 import Model.Result;
 import java.io.BufferedReader;
 import java.io.FileReader;

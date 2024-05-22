@@ -12,7 +12,7 @@
 
     package Metrics;
 
-    import Model.ClassLevelMetric;
+    import Model.DefaultMetric.ClassLevelMetric;
     import Model.Result;
 
     public class ExampleMetric extends ClassLevelMetric {

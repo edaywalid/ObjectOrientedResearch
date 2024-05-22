@@ -1,4 +1,4 @@
-package Model;
+package Model.DefaultMetric;
 
 public abstract class ClassLevelMetric extends MetricDefinition{
 

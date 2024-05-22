@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AttributeUsageCounter" />
+        <module name="MERTIC_ANALYSE_APP" />
       </profile>
     </annotationProcessing>
   </component>

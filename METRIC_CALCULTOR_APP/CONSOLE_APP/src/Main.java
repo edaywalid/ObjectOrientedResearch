@@ -1,7 +1,4 @@
 import Controller.Metric_Controller;
-import Model.MetricDefinition;
-import Model.MetricResultWrapper;
-import View.ConsoleView;
 
 public class Main {
     public static void main(String[] args) {
