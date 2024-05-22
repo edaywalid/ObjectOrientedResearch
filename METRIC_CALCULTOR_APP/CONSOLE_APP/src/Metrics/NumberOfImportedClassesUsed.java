@@ -2,7 +2,6 @@ package Metrics;
 
 import Model.DefaultMetric.ClassLevelMetric;
 import Model.Result;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,12 +10,11 @@ import java.util.Set;
 
 public class NumberOfImportedClassesUsed extends ClassLevelMetric {
   public NumberOfImportedClassesUsed(String Name) {
-      super(Name);
+    super(Name);
   }
 
   public Set<String> getNumberOfUsedClasses(String filePath) {
-    NumberOfImportedClasses NOIC =
-        new NumberOfImportedClasses("Number of Imported Classes");
+    NumberOfImportedClasses NOIC = new NumberOfImportedClasses("Number of Imported Classes");
     Set<String> importedPackages = NOIC.getImportedPackages(filePath);
     Set<String> ClassesToSearch = new HashSet<>();
     for (String p : importedPackages) {
@@ -30,30 +28,23 @@ public class NumberOfImportedClassesUsed extends ClassLevelMetric {
 
   public boolean ClassUsed(String ClassName, String filePath) {
     try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-      String line;
+      String line, lineTrimmed;
       boolean inComment = false;
-      boolean inString = false;
       while ((line = reader.readLine()) != null) {
-        line = line.trim();
-        if (line.startsWith("//")) {
-            continue; // Skip the line if it is a comment
+        lineTrimmed = line.trim();
+        if (lineTrimmed.startsWith("//")) {
+          continue; // Skip the line if it is a comment
         }
-        if (line.contains("\"")) {
-          inString = !inString; // Toggle the inString flag
-        }
-        if (line.contains("/*")) {
+        if (lineTrimmed.startsWith("/*")) {
           inComment = true; // Start of the block comment
         }
         if (inComment) {
-          if (line.contains("*/")) {
+          if (lineTrimmed.contains("*/") || lineTrimmed.startsWith("*/")) {
             inComment = false; // End of the block comment
           }
           continue;
         }
-        if (line.contains(ClassName) && !line.contains("import")) {
-          if (inString) {
-            continue;
-          }
+        if (line.contains(" " + ClassName) && !lineTrimmed.startsWith("import")) {
           return true;
         }
       }
