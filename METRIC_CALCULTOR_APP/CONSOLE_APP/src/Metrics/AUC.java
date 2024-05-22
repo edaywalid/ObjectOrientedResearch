@@ -119,11 +119,17 @@ public class AUC  extends ClassLevelMetric {
             countAttributeUsage(file_path);
         } catch (FileNotFoundException e) {
         }
+        System.out.println("number of methods " +this.getNumberOfMethods());
+        if(this.getNumberOfMethods() == 0){
+            return 0;
+        }
+        System.out.println("utilisationAttribute() = " + utilisationAttribute());
+        System.out.println("numberOfMethods = " + this.getNumberOfMethods());
         return this.utilisationAttribute()/this.getNumberOfMethods();
     }
 
     @Override
     public Result execute(String file_path) {
-        return new Result(this.metricName, String.valueOf(calculate(file_path)).substring(0,1));
+        return new Result(this.metricName, String.valueOf(calculate(file_path)));
     }
 }
