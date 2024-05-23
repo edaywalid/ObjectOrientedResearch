@@ -2,8 +2,6 @@ package Repository;
 
 import Metrics.*;
 import Model.BaseMetric;
-import Model.DefaultMetric.Metric;
-import Model.gitMetric.gitMetric;
 import java.util.ArrayList;
 import java.util.List;
 
