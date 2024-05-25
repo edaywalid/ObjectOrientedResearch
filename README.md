@@ -46,7 +46,7 @@ To install and run the Desktop analyser app :
 
 3.  Run the desktop app:
 
-            cd ObjectOrientedSoftwareMetrics/'Calculatrice d'analyze'/dist
+            cd DESKTOP_ANALYSER_APP/dist
             java -jar curve-line-chart.jar
 
 ## Usage
