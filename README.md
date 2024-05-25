@@ -13,7 +13,7 @@ This project involves the creation of a research paper on metrics for object-ori
 
 ## Installation
 
-To install and run the software locally, follow these steps:
+To install and run the Console-App locally, follow these steps:
 
 1.  Clone the repository:
 
@@ -28,6 +28,8 @@ To install and run the software locally, follow these steps:
           cd ObjectOrientedSoftwareMetrics/CONSOLE_METRIC_ANALYSER
           make run
 
+To install and run the Calculator app :
+- java >=22
 ## Usage
 
 The console application can be used to analyze metrics for your object-oriented projects. To get started, follow these steps:
