@@ -15,21 +15,40 @@ This project involves the creation of a research paper on metrics for object-ori
 
 To install and run the Console-App locally, follow these steps:
 
+- NOTE THAT THIS INSTALLATION FOR CONSOLE_APP IS FOR LINUX SYSTEMS WE WILL PROVIDE FOR OTHER SYSTEMS LATER ON
+
 1.  Clone the repository:
 
 -      https://github.com/edaywalid/ObjectOrientedSoftwareMetrics
 -      cd ObjectOrientedSoftwareMetrics
-- Install the required dependencies:
+
+2. Install the required dependencies:
+
 - java >= 17
 - maven >= 3.8.7
 - make >= 4.4.1
-- Run the console application:
+
+3.  Run the console application:
 
           cd ObjectOrientedSoftwareMetrics/CONSOLE_METRIC_ANALYSER
           make run
 
-To install and run the Calculator app :
-- java >=22
+To install and run the Desktop analyser app :
+
+1.  Clone the repository:
+
+-      https://github.com/edaywalid/ObjectOrientedSoftwareMetrics
+-      cd ObjectOrientedSoftwareMetrics
+
+2. Install the required dependencies:
+
+- java >= 22
+
+3.  Run the desktop app:
+
+            cd ObjectOrientedSoftwareMetrics/'Calculatrice d'analyze'/dist
+            java -jar curve-line-chart.jar
+
 ## Usage
 
 The console application can be used to analyze metrics for your object-oriented projects. To get started, follow these steps:
