@@ -66,6 +66,6 @@ For more detailed documentation and additional resources, visit our [website](ht
 - Contributor 1 (KARA NABIL)
 - Contributor 2 (KECIRA ABDERRAOUF)
 - Contributor 3 (ADEL HADJ ARAB)
-- ME (BENALIA MOHAMED)
+- Contributor 4 (BENALIA MOHAMED)
 - Contributor 5 (RACHEDI ABDERRAHMANE)
 - ME (BECHAR WALID)
