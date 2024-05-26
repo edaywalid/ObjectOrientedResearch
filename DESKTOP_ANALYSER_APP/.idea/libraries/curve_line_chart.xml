@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="curve-line-chart">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/dist/curve-line-chart.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
