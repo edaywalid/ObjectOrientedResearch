@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="application_d'annalyse">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/miglayout-4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mysql-connector-java-5.1.23-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TimingFramework-0.55.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
