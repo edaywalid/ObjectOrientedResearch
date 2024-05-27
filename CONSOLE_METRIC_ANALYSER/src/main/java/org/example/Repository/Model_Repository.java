@@ -20,15 +20,14 @@ public class Model_Repository {
                     new NumberOfInterfacesImplemented("Number of Interfaces Implemented"),
                     new numberOfUsedMethodsFromImports("Number of Used Methods From Imports"),
                     new WebImportCounter("Web Import Counter"),
-//                    new RUEMetric("CPU usage"),  // CPU USAGE COUNT DOESNT WORK IN WINDOWS
-//                    new AUC("Attribute Usage Count") ,
-                    new NumberOfInstantiableVariable("Number of Instantiable Variables")
-//                    new VariableNamingCoherence("Variable Naming Coherence")
+                    new AUC("Attribute Usage Count") ,
+                    new NumberOfInstantiableVariable("Number of Instantiable Variables"),
+                    new VariableNamingCoherence("Variable Naming Coherence")
             ));
 
     packageLevelMetrics = new ArrayList<>(List.of());
     gitLevelMetrics = new ArrayList<>(List.of(
-//            new ClassModificationFrequency("Class Modification Frequency")
+            new ClassModificationFrequency("Class Modification Frequency")
     ));
   }
 

@@ -15,6 +15,9 @@ public class ConsoleView {
         System.out.println("Enter the file path : ");
         filePaths.add(scanner.nextLine());
 
+        // if it is a windows file path convert the path to unix style
+        filePaths.replaceAll(s -> s.replace("\\", "/"));
+
         return filePaths;
     }
 
