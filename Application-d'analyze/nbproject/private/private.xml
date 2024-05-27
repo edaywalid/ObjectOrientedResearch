@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Mimo/OneDrive/Bureau/try1/src/Main.java</file>
-            <file>file:/C:/Users/Mimo/OneDrive/Bureau/try1/src/Calculator.java</file>
+            <file>file:/C:/Users/Mimo/OneDrive/Bureau/Application-d'analyze/src/test/Metrics/VariableNamingCoherence.java</file>
+            <file>file:/C:/Users/Mimo/OneDrive/Bureau/Application-d'analyze/src/test/Metrics/RUEMetric.java</file>
+            <file>file:/C:/Users/Mimo/OneDrive/Bureau/Application-d'analyze/src/test/Metrics/NumberOfInstantiableVariable.java</file>
+            <file>file:/C:/Users/Mimo/OneDrive/Bureau/Application-d'analyze/src/test/Metrics/NumberOfInterfacesImplemented.java</file>
+            <file>file:/C:/Users/Mimo/OneDrive/Bureau/Application-d'analyze/src/Calculator.java</file>
         </group>
     </open-files>
 </project-private>

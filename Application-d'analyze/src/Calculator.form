@@ -116,6 +116,7 @@
                                   <Component id="metrique2" min="-2" pref="291" max="-2" attributes="0"/>
                                   <Component id="metrique6" max="-2" attributes="0"/>
                                   <Component id="calculateButton" min="-2" pref="291" max="-2" attributes="0"/>
+                                  <Component id="metrique8" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="classSelectedLabel" alignment="0" min="-2" pref="746" max="-2" attributes="0"/>
@@ -143,8 +144,11 @@
                           <Component id="metrique6" alignment="3" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="metrique7" min="-2" pref="53" max="-2" attributes="0"/>
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="metrique7" alignment="3" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="metrique8" alignment="3" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="40" max="32767" attributes="0"/>
                       <Component id="classSelectedLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -180,7 +184,6 @@
                   <Color blue="44" green="3b" red="22" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Number of imports per class"/>
-                <Property name="actionCommand" type="java.lang.String" value="Number of imports per class"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="metrique2ActionPerformed"/>
@@ -250,7 +253,8 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="44" green="3b" red="22" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="CPU Usage"/>
+                <Property name="text" type="java.lang.String" value="Number of Instanciable Variables"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="metrique6ActionPerformed"/>
@@ -294,6 +298,20 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="metrique8">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="DejaVu Sans" size="14" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="44" green="3b" red="22" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Variable Naming Coherence"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="metrique8ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

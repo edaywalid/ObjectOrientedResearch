@@ -64,6 +64,7 @@ public class Calculator extends javax.swing.JFrame {
         calculateButton = new javax.swing.JButton();
         calculateButton1 = new javax.swing.JButton();
         classSelectedLabel = new javax.swing.JLabel();
+        metrique8 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,7 +89,6 @@ public class Calculator extends javax.swing.JFrame {
         metrique2.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
         metrique2.setForeground(new java.awt.Color(34, 59, 68));
         metrique2.setText("Number of imports per class");
-        metrique2.setActionCommand("Number of imports per class");
         metrique2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 metrique2ActionPerformed(evt);
@@ -133,7 +133,8 @@ public class Calculator extends javax.swing.JFrame {
 
         metrique6.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
         metrique6.setForeground(new java.awt.Color(34, 59, 68));
-        metrique6.setText("CPU Usage");
+        metrique6.setText("Number of Instanciable Variables");
+        metrique6.setToolTipText("");
         metrique6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 metrique6ActionPerformed(evt);
@@ -162,6 +163,15 @@ public class Calculator extends javax.swing.JFrame {
         classSelectedLabel.setForeground(new java.awt.Color(0, 153, 0));
         classSelectedLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
+        metrique8.setFont(new java.awt.Font("DejaVu Sans", 0, 14)); // NOI18N
+        metrique8.setForeground(new java.awt.Color(34, 59, 68));
+        metrique8.setText("Variable Naming Coherence");
+        metrique8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                metrique8ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -182,7 +192,8 @@ public class Calculator extends javax.swing.JFrame {
                             .addComponent(metrique4, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(metrique2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(metrique6)
-                            .addComponent(calculateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(calculateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(metrique8)))
                     .addComponent(classSelectedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
@@ -202,8 +213,10 @@ public class Calculator extends javax.swing.JFrame {
                     .addComponent(metrique5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(metrique6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(metrique7, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(metrique7, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(metrique8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(classSelectedLabel)
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -338,20 +351,20 @@ public class Calculator extends javax.swing.JFrame {
                 }
 
                 if(choice.contains(6)){
-                    RUEMetric ru=new RUEMetric("a name");
+                    NumberOfInstantiableVariable niv=new NumberOfInstantiableVariable("a name");
                    
-                      t.setData("CPU",ru.calculate(f.getAbsolutePath()));
+                      t.setData("NIV",niv.calculate(f.getAbsolutePath()));
                 }
                 if(choice.contains(7)){
                     NumberOfExternalImports wic=new NumberOfExternalImports("a name");
                    
                       t.setData("NXI",wic.calculate(f.getAbsolutePath()));
                 }
-//                if(choice.contains(8)){
-//                VariableNamingCoherence vr=new VariableNamingCoherence();
-//                    s=s+"Number Of Imported Classes Used: "+(vr.Calculate(f.getAbsolutePath()))+"\n";
-//                    System.out.println(vr.Calculate(f.getAbsolutePath()));
-        // }
+                if(choice.contains(8)){
+                VariableNamingCoherence vr= new VariableNamingCoherence("a name");
+                t.setData("VNC",vr.calculate(f.getAbsolutePath())*100);
+                System.out.println(vr.calculate(f.getAbsolutePath())*100);
+         }
             t.Start();
               
             
@@ -372,6 +385,12 @@ public class Calculator extends javax.swing.JFrame {
                 System.out.println("File Choosen is: " + f.getName());
                 System.out.println("File Choosen is: " + f.getAbsolutePath());
     }//GEN-LAST:event_calculateButton1ActionPerformed
+
+    private void metrique8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_metrique8ActionPerformed
+        if (metrique8.isSelected()){choice.add(8);
+                    System.out.println(choice);}
+                else {choice.remove(8);}
+    }//GEN-LAST:event_metrique8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -421,6 +440,7 @@ public class Calculator extends javax.swing.JFrame {
     private javax.swing.JRadioButton metrique5;
     private javax.swing.JRadioButton metrique6;
     private javax.swing.JRadioButton metrique7;
+    private javax.swing.JRadioButton metrique8;
     private raven.panel.PanelShadow panelShadow1;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,31 +1,23 @@
-package org.example.Metrics;
+package test.Metrics;
 
-import org.example.Model.DefaultMetric.ClassLevelMetric;
-import org.example.Model.Result;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class NumberOfInstantiableVariable extends ClassLevelMetric {
+public class NumberOfInstantiableVariable  {
+    String name;
     public NumberOfInstantiableVariable(String metricName) {
-        super(metricName);
+        name = metricName;
     }
 
-    @Override
     public float calculate(String file_path) {
         try {
             return countNonPrimitiveVariables(file_path);
         } catch (IOException e) {
             return -1;
         }
-    }
-
-
-    @Override
-    public Result execute(String file_path) {
-        return new Result(this.metricName, String.valueOf(calculate(file_path)));
     }
 
     public static int countNonPrimitiveVariables(String filename) throws IOException {
